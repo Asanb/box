@@ -1,0 +1,237 @@
+@import "src/stylesheet"
+@import "src/modal"
+
+$baseColor: #ff9d00
+$white: #fff
+$black: #373737
+$grey: #f4f4f4
+
+%button
+  font-size: 15px
+  padding: 18px 28px
+  background-color: $baseColor
+  color: $white
+  text-decoration: none
+  border-radius: 5px
+  vertical-align: middle
+  border: none
+  &:hover
+    background-color: lighten($baseColor, 5)
+    cursor: pointer
+
+%form
+  font-size: 15px
+  padding: 18px 28px
+  text-decoration: none
+  border-radius: 5px
+  vertical-align: middle
+  border: none
+  &:focus
+    border: none
+    outline: none
+%overlay
+  content: ""
+  display: block
+  position: absolute
+  top: 0
+  right: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.6)
+body
+  margin: 0 auto
+  font-family: Roboto, sans-serif
+  padding: 0
+img
+  max-width: 100%
+h1
+  margin: 10px 0
+p
+  margin: 8px 0
+h5
+  margin: 0
+.header
+  padding: 15px 0
+  &_phone
+    margin-right: 10px
+  &_button
+    @extend %button
+    &_img
+      margin-right: 7px
+      vertical-align: middle
+  &_contacts
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    &_phone
+      font-size: 22px
+      font-weight: 500
+      line-height: 22px
+      color: $black
+      text-decoration: none
+      padding-right: 1rem
+      &:first-child
+        margin-right: 1rem
+        border-right: 1px solid #a3a3a3
+
+.main
+  display: block
+  min-height: 530px
+  position: relative
+  padding-bottom: 60px
+  padding-top: 65px
+  background: $black url("../img/bg-image.jpg") center no-repeat
+  background-size: cover
+  &_overlay
+    @extend %overlay
+  &_button
+    @extend %button
+  &_form
+    display: inline-block
+    margin-top: 24px
+    padding: 27px
+    background-color: rgba(252, 252, 252, 0.2)
+    &-text
+      font-size: 20px
+      font-weight: 300
+      color: $white
+      line-height: 30px
+      margin-top: 0 !important
+    &-action
+      font-weight: bold
+      text-transform: uppercase
+
+  &_image
+    position: relative
+    display: inline-block
+    z-index: 1
+    //круг
+    &::before
+      content: ""
+      position: absolute
+      left: 50%
+      border: 1px solid $white
+      border-radius: 50%
+      width: 390px
+      height: 390px
+      margin-left: -195px
+      z-index: -2
+  &_h1
+    color: $white
+  &_sub-tittle
+    font-size: 28px
+    font-weight: 300
+    color: $white
+
+  &_input
+    @extend %form
+
+  &_small-text
+    display: -webkit-box
+    color: $white
+    margin-top: 10px
+.features
+  padding-top: 50px
+  padding-bottom: 50px
+  background-color: $grey
+  &-all
+    text-align: center
+    margin-bottom: 1rem
+    &_h2
+      font-size: 36px
+      font-weight: 900
+      color: $baseColor
+    &_subtitle
+      font-size: 16px
+      line-height: 20px
+      color: $black
+  &-first
+    display: flex
+    padding: 20px 20px
+    background-color: $white
+    align-items: center
+    margin-bottom: 2rem
+    &_image
+      flex: none
+      margin-right: 10px
+.product
+  padding: 4rem 0
+  &_item
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin: 1.5rem 0
+    &-text
+      font-size: 20px
+      font-weight: 500
+      line-height: 20px
+      margin-top: 2rem
+      margin-bottom: 1.5rem
+  &_button
+    @extend %button
+    &-info
+      font-size: 15px
+      padding: 18px 28px
+      background-color: $white
+      color: $black
+      text-decoration: none
+      border-radius: 5px
+      vertical-align: middle
+      border: solid 1px $black
+      &:hover
+        border: solid 1px $baseColor
+        color: $baseColor
+        cursor: pointer
+  &-text
+    text-align: center
+    font-size: 27px
+    font-weight: bold
+    line-height: 18px
+    color: $black
+    text-transform: uppercase
+    margin-bottom: 1rem
+    &_img
+      width: 6rem
+      margin-top: 12px
+
+  &_image
+    max-height: 285px
+    min-height: 285px
+.offer
+  display: block
+  position: relative
+  min-height: 400px
+  background: $black url("../img/bg-image2.jpg") center no-repeat
+  background-size: cover
+  text-align: center
+  padding: 60px 0
+  z-index: 1
+  &_overlay
+    @extend %overlay
+    z-index: -1
+  &_input
+    @extend %form
+    min-width: 365px
+    margin-bottom: 0.5rem
+    text-align: center
+  &_button
+    @extend %button
+
+  &_form
+    display: flex
+    flex-direction: column
+  &_text
+    color: $white
+    font-size: 32px
+    line-height: 35px
+    &-small
+      font-size: 26px !important
+    &_subtitle
+      color: $white
+      font-size: 20px
+      font-weight: 300
+      line-height: 30px
+      margin-bottom: 1rem
+    &_small
+      color: $white
+      margin-top: 0.2rem
