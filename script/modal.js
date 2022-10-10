@@ -1,9 +1,12 @@
+"use strict"
+
 let btn = document.querySelector(".header_button");
-let btnClose = document.querySelector(".popup-close")
+let btnClose = document.querySelector(".popup-close");
+let modal = document.querySelector(".overlay");
 
 btn.onclick = function () {
- document.querySelector(".overlay").style.display = "block"
+ modal.style.display = "block"
 }
 btnClose.onclick = function () {
- document.querySelector(".overlay").style.display = "none"
+ modal.style.display = "none"
 }
