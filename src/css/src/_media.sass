@@ -1,0 +1,24 @@
+@import "smart-grid"
+
+@media screen and (max-width: 960px)
+	.menu
+		display: none
+	.mobile-menu-button
+		display: block
+	.item-tittle
+		min-height: 330px
+		&-content
+			padding: 40px 30px
+	.col-6-padding, .pattern
+		margin:
+			top: 0
+			left: 0
+			right: 0
+			bottom: $offset_one_side !important
+	.aside-box
+		display: none
+@media screen and (min-width: 960px)
+	.mobile-menu
+		display: none !important
+
+@media screen and (max-width: 1140px)
