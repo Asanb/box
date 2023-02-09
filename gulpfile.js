@@ -24,21 +24,12 @@ const isSync = (process.argv.indexOf('--sync') !== -1);
 	3. по желанию pug html препроц
 */
 
-/*
-let cssFiles = [
-	'./node_modules/normalize.css/normalize.css',
-	'./src/css/base.css',
-	'./src/css/grid.css',
-	'./src/css/humans.css'
-];
-*/
-
 function clear(){
 	return del('build/*');
 }
 
 function styles(){
-	return gulp.src('./srs/css/styles.sass')
+	return gulp.src('./src/css/main.sass')
 			   .pipe(gulpif(isDev, sourcemaps.init()))
 			   //.pipe(less())
 			   .pipe(sass().on('error', sass.logError))
