@@ -38,7 +38,7 @@ function clear(){
 }
 
 function styles(){
-	return gulp.src('./src/css/styles.sass')
+	return gulp.src('./srs/css/styles.sass')
 			   .pipe(gulpif(isDev, sourcemaps.init()))
 			   //.pipe(less())
 			   .pipe(sass().on('error', sass.logError))
