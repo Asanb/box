@@ -1,8 +1,5 @@
 @import "src/_modal"
 @import "src/_production"
-@import "src/smart-grid"
-@import "src/_fonts"
-
 
 $baseColor: #ff9d00
 $white: #fff
@@ -18,8 +15,9 @@ $grey: #f4f4f4
   border-radius: 5px
   vertical-align: middle
   border: none
+  transition: color .50s ease, background-color .50s ease
   &:hover
-    background-color: lighten($baseColor, 5)
+    background-color: lighten($baseColor, 10)
     cursor: pointer
 
 %form
@@ -29,6 +27,7 @@ $grey: #f4f4f4
   border-radius: 5px
   vertical-align: middle
   border: none
+  width: 320px
   &:focus
     border: none
     outline: none
@@ -54,9 +53,12 @@ p
 h5
   margin: 0
 .header
+  &-row
+    justify-content: space-between
   padding: 15px 0
   &_phone
     margin-right: 10px
+    display: block
   &_button
     @extend %button
     &_img
@@ -78,23 +80,26 @@ h5
         border-right: 1px solid #a3a3a3
 
 .main
-  display: block
-  min-height: 530px
   position: relative
   padding-bottom: 60px
   padding-top: 65px
   background: $black url("../img/bg-image.jpg") center no-repeat
   background-size: cover
+  &-row
+    justify-content: space-evenly
+  &-right
+    z-index: 1
+    flex: end
   &_overlay
     @extend %overlay
   &_button
     @extend %button
   &_form
-    display: inline-block
     margin-top: 24px
     padding: 27px
     background-color: rgba(252, 252, 252, 0.2)
     &-text
+      width: 420px
       font-size: 20px
       font-weight: 300
       color: $white
@@ -120,9 +125,11 @@ h5
       margin-left: -195px
       z-index: -2
   &_h1
+    font-size: 40px
     color: $white
+    line-height: 1
   &_sub-tittle
-    font-size: 28px
+    font-size: 20px
     font-weight: 300
     color: $white
 
