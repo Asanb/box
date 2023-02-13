@@ -2,13 +2,16 @@
 @import "src/_production"
 @import "src/_media"
 @import "src/smart-grid"
++reset
 .container
   +wrapper
 .row
   +row-flex
 .col-lg-6
+
   +size(6)
 .col-lg-4
+  +col()
   +size(4)
 
 $baseColor: #ff9d00
@@ -169,7 +172,7 @@ h5
     padding: 20px 20px
     background-color: $white
     align-items: center
-    margin-bottom: 2rem
+    margin-bottom: $offset
     &_image
       flex: none
       margin-right: 10px

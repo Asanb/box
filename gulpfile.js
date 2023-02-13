@@ -95,7 +95,7 @@ function grid(done){
 	let settings = {
 		outputStyle: 'sass',
 		columns: 12,
-    	offset: "20px",
+    	offset: "30px",
     	//mobileFirst: true,
     	container: {
 	        maxWidth: "1440px",
@@ -118,7 +118,7 @@ function grid(done){
     	},
 	};
 
-	smartgrid('./src/css', settings);
+	smartgrid('./src/css/src', settings);
 	done();
 }
 
