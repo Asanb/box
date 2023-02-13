@@ -1,5 +1,15 @@
 @import "src/_modal"
 @import "src/_production"
+@import "src/_media"
+@import "src/smart-grid"
+.container
+  +wrapper
+.row
+  +row-flex
+.col-lg-6
+  +size(6)
+.col-lg-4
+  +size(4)
 
 $baseColor: #ff9d00
 $white: #fff
@@ -89,7 +99,6 @@ h5
     justify-content: space-evenly
   &-right
     z-index: 1
-    flex: end
   &_overlay
     @extend %overlay
   &_button
