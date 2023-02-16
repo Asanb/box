@@ -378,7 +378,7 @@
     </div> 
 </div>
 <!--map-->
-<div class="map">
+<div class="map" id="map">
 </div>
 <!--footer-->
 <footer class="footer">
@@ -388,6 +388,15 @@
         </div>
     </div>
 </footer>
+<script type="text/javascript">
+        ymaps.ready(init);
+        function init(){
+            var myMap = new ymaps.Map("map", {
+                center: [55.72, 37.67],
+                zoom: 16
+            });
+        }
+</script>
 <script src="./js/scripts.min.js"></script>
 </body>
 </html>
