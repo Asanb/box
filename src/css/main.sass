@@ -10,9 +10,12 @@
 .col-lg-6
   +col()
   +size(6)
+  +size-xs(12)
 .col-lg-4
   +col()
   +size(4)
+  +size-md(6)
+  +size-xs(12)
 
 $baseColor: #ff9d00
 $white: #fff
@@ -276,10 +279,14 @@ h5
   &-logos
     +col()
     +size(3)
+    +size-md(4)
+    +size-sm(6)
+    +size-xs(12)
     margin-bottom: $offset
     &_img
       cursor: pointer
       filter: grayscale(1)
+      margin: 0 auto
       &:hover
         filter: grayscale(0)
       
